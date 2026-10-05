@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suchinta's Guardian Angel</title>
+  <meta name="description" content="A bright, pure sanctuary of warm advice and caring reminders crafted for Suchinta.">
+
+  <!-- Google Fonts: Outfit & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=5.4">
+</head>
+
+<body>
+  <!-- Ambient Soft Sunlight Background Orbs -->
+  <div class="sunlight-orb sun-1"></div>
+  <div class="sunlight-orb sun-2"></div>
+  <div class="cloud-layer"></div>
+
+  <!-- Background Animated Wildlife Layer (Flying Birds, Running Cats & Dogs) -->
+  <div class="wildlife-stage" id="wildlifeStage" aria-hidden="true"></div>
+
+  <!-- Radiant Smiling Corner Sun -->
+  <div class="corner-sun" id="cornerSun" title="A little sunshine for Suchinta ☀️" aria-label="Radiant Sunshine">
+    <div class="sun-glow-ring"></div>
+    <svg class="sun-svg" viewBox="0 0 140 140" width="115" height="115" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sunCoreGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fffbeb" />
+          <stop offset="40%" stop-color="#fef08a" />
+          <stop offset="80%" stop-color="#f59e0b" />
+          <stop offset="100%" stop-color="#d97706" />
+        </radialGradient>
+        <linearGradient id="rayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fde047" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.25" />
+        </linearGradient>
+      </defs>
+
+      <!-- Rotating Sunbeams -->
+      <g class="sun-rays">
+        <path d="M 70 6 L 75 26 L 65 26 Z" fill="url(#rayGrad)" />
+        <path d="M 70 134 L 75 114 L 65 114 Z" fill="url(#rayGrad)" />
+        <path d="M 6 70 L 26 65 L 26 75 Z" fill="url(#rayGrad)" />
+        <path d="M 134 70 L 114 65 L 114 75 Z" fill="url(#rayGrad)" />
+
+        <path d="M 25 25 L 43 37 L 37 43 Z" fill="url(#rayGrad)" />
+        <path d="M 115 115 L 97 103 L 103 97 Z" fill="url(#rayGrad)" />
+        <path d="M 115 25 L 103 43 L 97 37 Z" fill="url(#rayGrad)" />
+        <path d="M 25 115 L 37 97 L 43 103 Z" fill="url(#rayGrad)" />
+
+        <!-- Intermediate smaller rays -->
+        <path d="M 44 14 L 52 30 L 44 28 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 96 14 L 88 30 L 96 28 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 44 126 L 52 110 L 44 112 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 96 126 L 88 110 L 96 112 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 14 44 L 30 52 L 28 44 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 14 96 L 30 88 L 28 96 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 126 44 L 110 52 L 112 44 Z" fill="url(#rayGrad)" opacity="0.8" />
+        <path d="M 126 96 L 110 88 L 112 96 Z" fill="url(#rayGrad)" opacity="0.8" />
+      </g>
+
+      <!-- Luminous Sun Core Disc -->
+      <circle cx="70" cy="70" r="38" fill="url(#sunCoreGrad)" class="sun-disc" />
+
+      <!-- Cute Smiling Face matching the Angel's style -->
+      <!-- Blushing Cheeks -->
+      <ellipse cx="54" cy="74" rx="5" ry="3.2" fill="#f43f5e" opacity="0.45" />
+      <ellipse cx="86" cy="74" rx="5" ry="3.2" fill="#f43f5e" opacity="0.45" />
+      <!-- Happy Smiling Eyes -->
+      <path d="M 50 67 Q 55 61 60 67" fill="none" stroke="#78350f" stroke-width="2.4" stroke-linecap="round" />
+      <path d="M 80 67 Q 85 61 90 67" fill="none" stroke="#78350f" stroke-width="2.4" stroke-linecap="round" />
+      <!-- Sweet Smile -->
+      <path d="M 64 75 Q 70 82 76 75" fill="none" stroke="#78350f" stroke-width="2.2" stroke-linecap="round" />
+    </svg>
+  </div>
+
+  <!-- Top-Right Prominent Credits Button -->
+  <a href="together.html" id="topCreditsLink" class="top-credits-btn" title="Credits & Copyright" aria-label="Credits">
+    <span class="credits-icon">📜</span>
+    <span class="credits-text">Credits</span>
+    <span class="credits-sparkle">✨</span>
+  </a>
+
+  <!-- Top-Right Guardian Gate (Admin Portal) -->
+  <a href="admin.php" id="adminGateLink" class="top-gate-link" title="Guardian Gate (Admin Portal)"
+    aria-label="Guardian Gate (Admin Portal)">
+    <div class="top-gate-halo"></div>
+    <svg class="top-gate-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+      stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+    <span class="top-gate-tooltip">Guardian Gate (Admin)</span>
+  </a>
+
+  <div class="app-layout">
+    <!-- Compact Top Header -->
+    <header class="header">
+      <div class="halo-badge">
+        <span class="sparkle-icon">✨</span>
+        <span>Kheli ei emon</span>
+      </div>
+      <h1 class="title">Suchinta's Guardian Angel</h1>
+      <p class="subtitle">Try this goriber angel</p>
+    </header>
+
+    <!-- Center Stage: Perfectly Centered Sanctuary -->
+    <main class="sanctuary-stage" aria-label="Guardian Angel Sanctuary">
+      <div class="sanctuary-core">
+
+        <!-- Fluffy Cloud-Shaped Advice Board -->
+        <div class="cloud-board-wrapper">
+          <div class="cloud-board" id="adviceCard" role="region" aria-live="polite">
+
+            <!-- Cloud Puffs (Fused together via CSS filter into a seamless fluffy cloud) -->
+            <div class="cloud-puff puff-top-left" aria-hidden="true"></div>
+            <div class="cloud-puff puff-top-center" aria-hidden="true"></div>
+            <div class="cloud-puff puff-top-right" aria-hidden="true"></div>
+            <div class="cloud-puff puff-left" aria-hidden="true"></div>
+            <div class="cloud-puff puff-right" aria-hidden="true"></div>
+            <div class="cloud-puff puff-bottom-left" aria-hidden="true"></div>
+            <div class="cloud-puff puff-bottom-right" aria-hidden="true"></div>
+
+            <!-- Downward Cloud Tail Puffs Pointing Directly to Angel's Halo -->
+            <div class="cloud-tail-puff tail-1" aria-hidden="true"></div>
+            <div class="cloud-tail-puff tail-2" aria-hidden="true"></div>
+            <div class="cloud-tail-puff tail-3" aria-hidden="true"></div>
+
+            <!-- Cloud Content Layer -->
+            <div class="cloud-inner-content">
+              <div class="cloud-top-actions">
+                <button id="soundToggleBtn" class="cloud-action-btn" title="Toggle gentle sound chime"
+                  aria-label="Toggle chime sound">
+                  <span id="soundIcon">🔔</span>
+                </button>
+                <button id="copyAdviceBtn" class="cloud-action-btn" title="Copy this advice" aria-label="Copy advice">
+                  📋
+                </button>
+              </div>
+
+              <!-- Advice Text (Pure message without count numbers) -->
+              <div class="quote-content" id="quoteContent">
+                <span class="quote-mark open-quote">“</span>
+                <div class="advice-text" id="adviceText">
+                  Whispering your guardian angel's words...
+                </div>
+                <span class="quote-mark close-quote">”</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Perfectly Centered Cute Guardian Angel Character -->
+        <div class="angel-anchor">
+          <div class="angel-pedestal-light"></div>
+
+          <button id="angelButton" class="angel-trigger" aria-label="Tap angel for new uplifting advice">
+            <!-- Sparkle Burst Effect Container -->
+            <div class="sparkle-burst" id="sparkleBurst"></div>
+
+            <!-- Cute Guardian Angel Vector Graphic -->
+            <div class="angel-character">
+              <!-- Glowing Golden Halo -->
+              <div class="angel-halo"></div>
+
+              <svg class="angel-svg" viewBox="0 0 200 220" width="180" height="200" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <defs>
+                  <!-- Luminous Wing Gradient -->
+                  <linearGradient id="wingLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="60%" stop-color="#fef3c7" />
+                    <stop offset="100%" stop-color="#fed7aa" />
+                  </linearGradient>
+
+                  <!-- Pearlescent Robe Gradient -->
+                  <linearGradient id="robeLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="70%" stop-color="#fdf4ff" />
+                    <stop offset="100%" stop-color="#fae8ff" />
+                  </linearGradient>
+
+                  <!-- Soft Peachy Skin Gradient -->
+                  <linearGradient id="skinLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#fff5f0" />
+                    <stop offset="100%" stop-color="#fed7cc" />
+                  </linearGradient>
+
+                  <!-- Warm Cocoa Hair Gradient -->
+                  <linearGradient id="hairLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8a5333" />
+                    <stop offset="50%" stop-color="#6e3f22" />
+                    <stop offset="100%" stop-color="#512c15" />
+                  </linearGradient>
+
+                  <!-- Magic Golden Star Wand Gradient -->
+                  <linearGradient id="wandStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fffbeb" />
+                    <stop offset="50%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="#d97706" />
+                  </linearGradient>
+
+                  <!-- Soft Wing Glow Filter -->
+                  <filter id="lightGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3.5" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Left Feathered Wing -->
+                <g class="wing wing-left">
+                  <path d="M 68 115 C 40 85, 5 95, 10 135 C 14 165, 50 160, 72 135 Z" fill="url(#wingLightGrad)"
+                    filter="url(#lightGlow)" stroke="#fde68a" stroke-width="0.8" />
+                  <path d="M 65 110 C 35 65, 0 85, 8 125 C 15 150, 48 145, 68 128 Z" fill="url(#wingLightGrad)"
+                    opacity="0.95" />
+                  <path d="M 62 105 C 42 50, 15 70, 22 105 C 28 128, 52 125, 66 118 Z" fill="#ffffff" opacity="0.9" />
+                </g>
+
+                <!-- Right Feathered Wing -->
+                <g class="wing wing-right">
+                  <path d="M 132 115 C 160 85, 195 95, 190 135 C 186 165, 150 160, 128 135 Z" fill="url(#wingLightGrad)"
+                    filter="url(#lightGlow)" stroke="#fde68a" stroke-width="0.8" />
+                  <path d="M 135 110 C 165 65, 200 85, 192 125 C 185 150, 152 145, 132 128 Z" fill="url(#wingLightGrad)"
+                    opacity="0.95" />
+                  <path d="M 138 105 C 158 50, 185 70, 178 105 C 172 128, 148 125, 134 118 Z" fill="#ffffff"
+                    opacity="0.9" />
+                </g>
+
+                <!-- Handsome Male Angel Celestial Tunic -->
+                <path d="M 72 128 L 128 128 L 144 195 L 56 195 Z" fill="url(#robeLightGrad)" stroke="#e2e8f0"
+                  stroke-width="0.8" />
+                <!-- Royal V-Neck Collar with Golden Trim -->
+                <path d="M 85 128 L 100 146 L 115 128" fill="none" stroke="#f59e0b" stroke-width="2.8"
+                  stroke-linecap="round" />
+                <!-- Golden Waist Belt with Celestial Star Buckle -->
+                <rect x="72" y="152" width="56" height="8.5" rx="3" fill="#f59e0b" />
+                <polygon points="100,150 102,154 106,154 103,157 104,161 100,159 96,161 97,157 94,154 98,154"
+                  fill="#fffbeb" />
+
+                <!-- Neck -->
+                <rect x="94" y="122" width="12" height="10" rx="3" fill="url(#skinLightGrad)" />
+
+                <!-- Short Male Back Hair Outline -->
+                <path d="M 66 82 C 63 98, 66 114, 75 122 C 77 114, 76 96, 78 86 Z" fill="url(#hairLightGrad)" />
+                <path d="M 134 82 C 137 98, 134 114, 125 122 C 123 114, 124 96, 122 86 Z" fill="url(#hairLightGrad)" />
+
+                <!-- Angel Head -->
+                <ellipse cx="100" cy="98" rx="35" ry="33" fill="url(#skinLightGrad)" />
+
+                <!-- Handsome Short Tousled Male Hair -->
+                <path
+                  d="M 63 86 C 60 56, 80 46, 100 46 C 120 46, 140 56, 137 86 C 130 72, 118 68, 108 72 C 98 68, 84 66, 73 76 C 67 79, 64 83, 63 86 Z"
+                  fill="url(#hairLightGrad)" />
+                <!-- Layered Side-Swept Bangs -->
+                <path
+                  d="M 65 78 Q 75 95 86 80 Q 96 97 108 80 Q 118 92 131 76 C 126 66, 115 60, 100 60 C 84 60, 72 66, 65 78 Z"
+                  fill="url(#hairLightGrad)" />
+                <!-- Sideburns -->
+                <path d="M 64 84 L 67 96 L 72 88 Z" fill="url(#hairLightGrad)" />
+                <path d="M 136 84 L 133 96 L 128 88 Z" fill="url(#hairLightGrad)" />
+
+                <!-- Gentle Eyebrows -->
+                <path d="M 78 89 Q 84 86 89 88" fill="none" stroke="#512c15" stroke-width="2.2"
+                  stroke-linecap="round" />
+                <path d="M 111 88 Q 116 86 122 89" fill="none" stroke="#512c15" stroke-width="2.2"
+                  stroke-linecap="round" />
+
+                <!-- Sparkling Handsome Eyes -->
+                <g class="angel-eyes">
+                  <ellipse cx="84" cy="97" rx="4.8" ry="5.5" fill="#1e293b" />
+                  <circle cx="82.5" cy="95" r="1.8" fill="#ffffff" />
+                  <circle cx="85.5" cy="99.5" r="0.9" fill="#ffffff" />
+
+                  <ellipse cx="116" cy="97" rx="4.8" ry="5.5" fill="#1e293b" />
+                  <circle cx="114.5" cy="95" r="1.8" fill="#ffffff" />
+                  <circle cx="117.5" cy="99.5" r="0.9" fill="#ffffff" />
+                </g>
+
+                <!-- Subtle Rosy Cheeks & Charming Smile -->
+                <ellipse cx="79" cy="106" rx="5.5" ry="3" fill="#f43f5e" opacity="0.38" />
+                <ellipse cx="121" cy="106" rx="5.5" ry="3" fill="#f43f5e" opacity="0.38" />
+                <path d="M 94 107 Q 100 114 106 107" fill="none" stroke="#991b1b" stroke-width="2.2"
+                  stroke-linecap="round" />
+
+                <!-- Hands holding Star Wand -->
+                <circle cx="84" cy="154" r="6" fill="url(#skinLightGrad)" />
+                <circle cx="116" cy="154" r="6" fill="url(#skinLightGrad)" />
+
+                <!-- Magic Golden Star Wand -->
+                <g class="magic-star-wand">
+                  <line x1="116" y1="154" x2="135" y2="124" stroke="#f59e0b" stroke-width="2.5"
+                    stroke-linecap="round" />
+                  <polygon points="135,114 138,122 147,122 140,127 143,135 135,130 127,135 130,127 123,122 132,122"
+                    fill="url(#wandStarGrad)" filter="url(#lightGlow)" />
+                  <circle cx="135" cy="124" r="1.6" fill="#ffffff" />
+                </g>
+              </svg>
+            </div>
+          </button>
+
+          <span class="angel-click-prompt">✨ Amake click koro 😭✨</span>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Compact Bottom Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        Crafted using <span class="highlight-name">Frontal Cortex</span>
+        <span class="footer-dot">•</span>
+        <a href="together.html" class="footer-credits-badge" title="View Site Credits & Copyright">
+          <span>📜</span>
+          <span>Credits</span>
+          <span>✨</span>
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Pro Advice Modal / Message Box -->
+  <div id="proAdviceModal" class="pro-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="proModalTitle">
+    <div class="pro-modal-card">
+      <div class="pro-modal-header">
+        <div class="pro-modal-badge">
+          <span style="font-size: 1.15rem;">🌟</span>
+          <span id="proModalTitle" class="pro-modal-title">Pro Advice</span>
+        </div>
+        <button id="closeProModalBtn" class="pro-modal-close" aria-label="Close message box">✕</button>
+      </div>
+
+      <div class="pro-modal-body">
+        <div class="pro-modal-deco-wings">🪽 ✨ 🪽</div>
+        <p id="proModalContent" class="pro-modal-paragraph">
+          <!-- Full pro advice paragraph content will be inserted here -->
+        </p>
+      </div>
+
+      <div class="pro-modal-footer">
+        <button id="copyProAdviceBtn" class="pro-action-btn pro-copy-btn">
+          <span>Copy Advice</span>
+          <span>📋</span>
+        </button>
+        <button id="closeProModalFooterBtn" class="pro-action-btn pro-close-btn">
+          <span>Close</span>
+          <span>🌸</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="script.js?v=5.5"></script>
+</body>
+
+</html>
