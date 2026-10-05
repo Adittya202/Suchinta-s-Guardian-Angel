@@ -12,7 +12,7 @@
 ## 🌐 Live Website
 
 The sanctuary is publicly hosted and live at:
-### 👉 **[http://guardianangel.free.je/](http://guardianangel.free.je/)**
+### 👉 **[[http://guardianangel.free.je/](http://guardianangel.free.je/](http://guardianangel.free.je/))**
 
 ---
 
